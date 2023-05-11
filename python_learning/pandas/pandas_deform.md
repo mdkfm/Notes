@@ -12,11 +12,11 @@ df.pivot(index, columns, values)
 
 Simply,
 
-<img src="./joyful-pandas/source/_static/ch5_pivot.png" width="60%">
+<img src="./pictures/ch5_pivot.png" width="60%">
 
 More, `index`, `columns`, `values` are lists.
 
-<img src="./joyful-pandas/source/_static/ch5_mulpivot.png" width="60%">
+<img src="./pictures/ch5_mulpivot.png" width="60%">
 
 
 ## `pivot_table`
@@ -38,7 +38,7 @@ df.melt(id_vars, value_vars, var_name, value_name)
 `melt` makes column names in`value_vars` as a new column named `var_name`.\
 And it makes all origin values as a new column named `value_name`.
 
-<img src="./joyful-pandas/source/_static/ch5_melt.png" width="60%">
+<img src="./pictures/ch5_melt.png" width="60%">
 
 
 ## `pd.wide_to_long`
@@ -55,7 +55,7 @@ pd.wide_to_long(df,
 It makes `suffix` as the values of a new index named `j`.\
 And it makes `stubnames` as columns.
 
-<img src="./joyful-pandas/source/_static/ch5_wtl.png" width="60%">
+<img src="./pictures/ch5_wtl.png" width="60%">
 
 
 # Deform Index
