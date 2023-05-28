@@ -40,10 +40,22 @@ Legal expressions or registered variates:
 
 ### Random sample
 ```python3
-df.sample(size: int, replace: bool, weights: List[num])
+df.sample(size, replace, weights)
 ```
-`replace` indicates whether put element back.
+`size`, a int.\
+`replace`, a bool.\
+`weights`, a list of weight.\
+`replace` indicates whether put element back.\
 `weights` is relative probability.
+
+### `get_indexer`
+Search indexes in `df.index`.
+```python3
+df.index.get_indexer(target, method)
+```
+`target`, a `pd.Index` or a value as target.\
+`method`, ['pad', 'backfill', 'nearest'], search method, default `None`.
+
 
 ## `MultiIndex`
 A value of a `MultiIndex` is a tuple.
@@ -78,8 +90,8 @@ pd.MultiIndex.from_tuples(tuples, names)
 pd.MultiIndex.from_arrays(arrays, names)
 pd.MultiIndex.from_product(lists, names)
 ```
-`from_tuple` from a tuple list, a tuple is a `MultiIndex`. \
-`from_array` from a list of lists, a list is a layer index. \
+`from_tuples` from a tuple list, a tuple is a `MultiIndex`. \
+`from_arrays` from a list of lists, a list is a layer index. \
 `from_product` uses Cartesian product of lists.
 
 ### Change
@@ -114,7 +126,8 @@ pd.MultiIndex.from_product(lists, names)
 
 `df.set_axis(index, axis)`, `index` could be a `pd.Index` or `pd.MultiIndex`.
 
-`df.reset_index(indexes, drop)`, `drop` indicates whether drop or add to column.
+`df.reset_index(indexes, drop)`,
+`drop` indicates whether drop or add to column, default `False`
 
 `df.reindex(indexes)`, use new `indexes` and align based on index.
 It is often used to resort index.\

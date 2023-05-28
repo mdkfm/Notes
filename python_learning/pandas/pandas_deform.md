@@ -21,9 +21,9 @@ More, `index`, `columns`, `values` are lists.
 
 ## `pivot_table`
 `pivot_table` does not depend on the uniqueness.\
-It's `aggfunc`` parameter appoints a aggregate function.\
+It's `aggfunc` parameter appoints a aggregate function.\
 ```python3
-df.pivot(index, columns, values, aggfunc, margins)
+df.pivot_table(index, columns, values, aggfunc, margins)
 ```
 `margins` is a bool value, indicating whether perform marginal aggregation.\
 Other parameters are same as `pivot`'s.
@@ -72,8 +72,10 @@ Contrary to `unstack`, `stack` transforms columns into indexes.
 ## `pd.crosstab`
 It is similar as to `pivot_table`
 ```python3
-pd.croostab(index, columns, values, aggfunc)
+pd.croostab(index, columns, values, aggfunc, dropna)
 ```
+`dropna` is a bool value, default `True`.
+Do not include columns whose entries are all NaN.
 
 ## `explode`
 It could expand elements in a column, which is one of `list, tuple, Series, np.ndarray`.
@@ -84,5 +86,7 @@ df.explode(column)
 ## `get_dummies`
 It converts category features into indicator variables.
 ```python3
-pd.get_dummies(df)
+pd.get_dummies(df, dummy_na)
 ```
+`dummy_na` is a bool value,
+indicating whether regards `NaN` as a dummy.
