@@ -1,8 +1,14 @@
 [toc]
 
 ## GroupBy
-`df.groupby(cols)`, `cols`, str or list.\
-`df.groupby(condition)`, `condition`, series of group names, matching rows.\
+```python3
+df.groupby(cols, dropna)
+df.groupby(condition)
+```
+`cols`, str or list.\
+`condition`, series of group names, matching rows.\
+`dropna` is a bool value,
+indicating whether regard `NaN` as a group.\
 Return a `DataFrameGroupBy` or `SeriesGroupBy`.
 
 `GroupBy[cols]` return a `GroupBy`.

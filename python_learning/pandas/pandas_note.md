@@ -112,7 +112,7 @@ s.clip(inf: num, sup: num) # replace lower and higher with inf or sup
 ## Sort function
 ```python3
 df.sort_index(indexs, ascending: bool series)
-df.sort_values(level = cols, ascending: bool series = bs)
+df.sort_values(cols, ascending: bool series = bs)
 ```
 
 ## `apply` function
