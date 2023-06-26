@@ -61,7 +61,10 @@ df.index.get_indexer(target, method)
 A value of a `MultiIndex` is a tuple.
 
 We could not change the values of index directly. \
-`get_level_values(n)` get the n layer values. 
+```python3
+pd.get_level_values(n)
+```
+It gets values of nth layer. 
 
 ### `loc` and `iloc` indexer
 Before we used indexer, we should sort the indexes.
@@ -77,7 +80,6 @@ Particularly, `*` cloud be:
 
 #### `IndexSlice`
 ```python3
-import pandas as pd
 idx = pd.IndexSlice
 ```
 Use `idx` to call the `pd.IndexSlice` function. \
@@ -134,7 +136,8 @@ It is often used to resort index.\
 `df_1.reindex_like(df_2)` is similar.
 
 ## Calculation between index
-$$\rm S_A.intersection(S_B) = \rm S_A \cap S_B \Leftrightarrow \rm \{x|x\in S_A\, and\, x\in S_B\}$$
+
+$$ \rm S_A.intersection(S_B) = \rm S_A \cap S_B \Leftrightarrow \rm \{x|x\in S_A\, and\, x\in S_B\} $$
 $$\rm S_A.union(S_B) = \rm S_A \cup S_B \Leftrightarrow \rm \{x|x\in S_A\, or\, x\in S_B\}$$
 $$\rm S_A.difference(S_B) = \rm S_A - S_B \Leftrightarrow \rm \{x|x\in S_A\, and\, x\notin S_B\}$$
 $$\rm S_A.symmetric\_difference(S_B) = \rm S_A\triangle S_B\Leftrightarrow \rm \{x|x\in S_A\cup S_B - S_A\cap S_B\}$$

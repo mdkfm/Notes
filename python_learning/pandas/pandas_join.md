@@ -40,8 +40,9 @@ pd.concat(dfs, axis, join, keys)
 `keys` is a list of tips to mark the origin of data.  
 
 ## `append` and `assign`
+`append` has been not supported.
 `append` adds a series to table as a new row.\
-`assign` adds a series to table as a new column.
+`assign` adds a series to table as a new column.\
 
 ```python3
 df.append(s, ignore_index)
