@@ -111,9 +111,12 @@ s.clip(inf: num, sup: num) # replace lower and higher with inf or sup
 
 ## Sort function
 ```python3
-df.sort_index(indexs, ascending: bool series)
-df.sort_values(cols, ascending: bool series = bs)
+df.sort_index(level, ascending)
+df.sort_values(by, ascending)
 ```
+`level`, list-like, sorted levels. \
+`by`, sorted columns.\
+`ascending`, bool, increase or not. 
 
 ## `apply` function
 ```python3
@@ -129,3 +132,9 @@ s.rolling(window: int = len)
 s.expanding()
 s.ewm(alpha: num = coefficient)
 ```
+
+# Get dummies
+```python3
+pd.get_dummies(s, prefix)
+```
+`prefix`, str, as columns prefix.
