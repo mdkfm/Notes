@@ -381,7 +381,9 @@ P(x) = \frac{\binom{g}{x}\binom{b}{n-x}}{\binom{N}{n}}\\
 g=\text{good}, b=\text{bad}
 $$
 
+
 Multivariate hyper-geometric
+
 $$
 f(x)=\frac{\left(\begin{array}{c}
 D \\
@@ -436,6 +438,7 @@ $$
 ```python3
 rng.pareto(a, size)
 ```
+
 $$
 p(x) = \frac{am^a}{x^{a+1}}
 $$
@@ -444,6 +447,7 @@ $$
 ```python3
 rng.zipf(a, size)
 ```
+
 $$
 p(k) = \frac{k^{-a}}{\zeta(a)}
 $$
@@ -452,6 +456,7 @@ $$
 ```python3
 rng.beta(a, size)
 ```
+
 $$
 f(x; a,b) = \frac{1}{B(\alpha, \beta)} x^{\alpha - 1}
 (1 - x)^{\beta - 1},\\
@@ -465,6 +470,7 @@ rng.dirichlet(alpha, size)
 ```
 `alpha`, sequence of floats, length k.\
 Output: The drawn samples, of shape (size, k).
+
 $$
 {\displaystyle f(x_{1},\dots ,x_{K};\alpha _{1},\dots ,\alpha _{K})={\frac {1}{\mathrm {B} (\alpha )}}\prod _{i=1}^{K}x_{i}^{\alpha _{i}-1}}
 $$
@@ -474,7 +480,8 @@ $$
 rng.gamma(shape, scale, size)
 ```
 `shape`, the `k` value of gamma distribution.\
-`scale`, the `theta` value of gamma distribution.\
+`scale`, the `theta` value of gamma distribution.
+
 $$
 p(x) = x^{k-1}\frac{e^{-x/\theta}}{\theta^k\Gamma(k)}
 $$
